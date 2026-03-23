@@ -1,0 +1,48 @@
+h1{
+    color: darkseagreen;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: deeppink;
+    margin:0;
+    line-height: 1.6;
+}
+header{
+    background-color: darkblue;
+    color: bisque;
+    text-align: center;
+    padding: 30px 20px;
+
+}
+nav{
+    background-color: aquamarine;
+    text-align: center;
+    padding: 12px;
+
+}
+nav a{
+    color: chocolate;
+    margin: 0 15px;
+    font-weight: 100;
+}
+section{
+    background-color: aqua;
+    margin: 20px autor;
+    padding: 20px;
+    width: 80%;
+    border-radius: 8px;
+
+}
+
+img{
+    border-radius: 10px;
+    margin-top: 10px;
+}
+footer{
+    background-color: brown;
+    color: darkorchid;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
