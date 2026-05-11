@@ -1,48 +1,65 @@
-h1{
-    color: darkseagreen;
-}
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background-color: deeppink;
-    margin:0;
-    line-height: 1.6;
-}
-header{
-    background-color: darkblue;
-    color: bisque;
-    text-align: center;
-    padding: 30px 20px;
-
-}
-nav{
-    background-color: aquamarine;
-    text-align: center;
-    padding: 12px;
-
-}
-nav a{
-    color: chocolate;
-    margin: 0 15px;
-    font-weight: 100;
-}
-section{
-    background-color: aqua;
-    margin: 20px autor;
-    padding: 20px;
-    width: 80%;
-    border-radius: 8px;
-
+h1 {
+  color: rgb(67, 178, 197); /* Cyan */
 }
 
-img{
-    border-radius: 10px;
-    margin-top: 10px;
-}
-footer{
-    background-color: brown;
-    color: darkorchid;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(204, 255, 20); /* Amarillo verdoso */
+  margin: 0;
+  line-height: 1.6;
 }
 
+header {
+  background-color: rgb(35, 139, 0); /* Verde oscuro */
+  color: rgb(205, 9, 26); /* Rojo brillante */
+  text-align: center;
+  padding: 30px 20px;
+}
+
+nav a {
+  font-weight: 100;
+}
+
+section {
+  background-color: rgb(119, 0, 255); /* Púrpura vibrante */
+  margin: 20px auto; /* Centrado horizontal */
+  padding: 20px;
+  width: 80%;
+}
+
+footer {
+  background-color: rgb(155, 204, 50); /* Verde amarillento */
+  color: black; /* Texto visible */
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: aquamarine;
+  color: blueviolet;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+button:active {
+  transform: scale(0.94);
+  background-color: chartreuse;
+}
+
+.mensaje {
+  display: none; /* Oculto por defecto */
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.5s ease;
+}
+
+.mensaje.show {
+  display: block; /* Se muestra cuando se agrega la clase 'show' */
+  opacity: 1;
+  transform: translateY(0);
+}

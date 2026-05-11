@@ -1,58 +1,182 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi primera pagina web</title>
-    <link rel="stylesheet" href="style.css"/>
-  </head>
-  <body>
-    <header>
-      <h1>Mi Página Personal</h1>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi página web</title>
+  <link rel="stylesheet" href="style.css"/>
+  <!-- Importar Font Awesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>Mi página web</h1>
+    <!-- Botón de modo oscuro -->
+    <button id="btnDarkMode" onclick="toggleDarkMode()">Modo oscuro</button>
+  </header>
 
-    <nav>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#pec">Proyecto PEC</a>
-    </nav>
+  <nav>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#pec">Proyecto PEC</a>
+  </nav>
 
-    <section id="sobre-mi">
-      <h2>Sobre mí</h2>
-      <img src="IMG/TARJETAABI.png" alt="Descripción de la imagen" width="400px" height="200px"> 
-      
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Mi nombre es Abigail</p>
+    <h3>Pedagogia de kinder</h3>
+    <h3>Me interesa conocer más sobre el PEC</h3>
+    <h3>Odontólogo profesional</h3>
 
-      <p>Hola, mi nombre es Abigail.</p>
+    <!-- Botón y mensaje -->
+    <button id="btnMensaje" onclick="toggleMensaje('mensaje','btnMensaje','Cuida y protege a los animales.','Mostrar mensaje','Ocultar mensaje')">
+      Mostrar mensaje
+    </button>
+    <p id="mensaje" style="display:none;"></p>
 
-      <p>Soy estudiante en el CECYCTEO-35.</p>
+    <button id="btnMensaje2" onclick="toggleMensaje('mensaje2','btnMensaje2','Ellos también tienen sentimientos.','Mostrar otro mensaje','Ocultar mensaje')">
+      Mostrar otro mensaje
+    </button>
+    <p id="mensaje2" style="display:none;"></p>
 
-      <p>Me gusta la tecnología y aprender sobre computación.</p>
+    <!-- Imagen de David -->
+    <img src="img/odontólogo (3).png" alt="sobre mí">
 
+    <!-- Datos de Abigail integrados -->
+    <h2>Información adicional</h2>
+    <p>Hola, mi nombre es Abigail.</p>
+    <p>Soy estudiante en el CECYCTEO-35.</p>
+    <p>Me gusta la tecnología y aprender sobre computación.</p>
+    <img src="IMG/ABIGAIL GABRIELA ZARATE.png" alt="Abigail" width="400" height="200">
+  </section>
 
-    <section id="pec">
-      <h2>Proyecto Escolar Comunitario</h2>
+  <section id="pec">
+    <h2>Proyecto Escolar Comunitario</h2>
+    <button id="show-message-button">Mostrar/Ocultar mensaje PEC</button>
+    <div class="mensaje" id="my-message">
+      ¡Este es el mensaje oculto del PEC!
+    </div>
 
-      <h3>Huellas: cuidado animal y salud comunitaria</h3>
-<img src="IMG/BANNER.png" alt="Descripción de la imagen" width="400px" height="200px"> 
-    </section>
-      <p>
-        Este proyecto busca promover el cuidado responsable de los perros en la
-        comunidad de San Antonino el Alto.
-      </p>
+    <h3>Huellas: cuidado animal y salud comunitaria</h3>
+    <img src="IMG/BANNER_ACTIVIDAD3_ABIGAIL_601.png" alt="Proyecto Huellas" width="400" height="200">
 
-      <p>
-        La problemática principal es la presencia de perros en la vía pública,
-        muchos de ellos sin esterilizar o sin vacunas.
-      </p>
+    <p>
+      Este proyecto busca promover el cuidado responsable de los perros en la
+      comunidad de San Antonino el Alto.
+    </p>
+    <p>
+      La problemática principal es la presencia de perros en la vía pública,
+      muchos de ellos sin esterilizar o sin vacunas.
+    </p>
+    <p>
+      A través de este proyecto se busca crear conciencia sobre el bienestar
+      animal y la salud comunitaria.
+    </p>
+  </section>
 
-      <p>
-        A través de este proyecto se busca crear conciencia sobre el bienestar
-        animal y la salud comunitaria.
-      </p>
-    </section>
+  <footer>
+    <p>2026 - Abigail</p>
+  </footer>
 
-    <footer>
-      <p>2026 - Mi Abigail</p>
-    </footer>
-  </body>
+  <!-- Botones flotantes -->
+  <a href="https://www.facebook.com/tuusuario" target="_blank" class="btn-flotante facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://wa.me/521XXXXXXXXXX" target="_blank" class="btn-flotante whatsapp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Flecha para volver arriba -->
+  <a href="#top" class="arrow-up">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+    <div>
+       </style>
+</head>
+<body>
+  <div class="encuesta">
+    <h2>Encuesta de Cuidado de Mascotas</h2>
+    <form>
+      <!-- Pregunta 1 -->
+      <label>1. ¿Qué aspecto del cuidado de mascotas te interesa más?</label>
+      <input type="radio" name="tema" value="alimentacion"> Alimentación saludable<br>
+      <input type="radio" name="tema" value="higiene"> Higiene y limpieza<br>
+      <input type="radio" name="tema" value="ejercicio"> Ejercicio y juegos<br>
+      <input type="radio" name="tema" value="veterinario"> Visitas al veterinario<br>
+
+      <!-- Pregunta 2 -->
+      <label>2. ¿Cada cuánto tiempo llevas a tu mascota al veterinario?</label>
+      <input type="radio" name="visitas" value="mensual"> Una vez al mes<br>
+      <input type="radio" name="visitas" value="trimestral"> Cada 3 meses<br>
+      <input type="radio" name="visitas" value="anual"> Una vez al año<br>
+      <input type="radio" name="visitas" value="solo_emergencias"> Solo en emergencias<br>
+
+      <!-- Pregunta 3 -->
+      <label>3. ¿Qué tipo de contenido te gustaría ver en nuestra página?</label>
+      <input type="checkbox" name="contenido" value="consejos"> Consejos prácticos<br>
+      <input type="checkbox" name="contenido" value="videos"> Videos educativos<br>
+      <input type="checkbox" name="contenido" value="historias"> Historias de mascotas<br>
+      <input type="checkbox" name="contenido" value="guias"> Guías paso a paso<br>
+
+      <!-- Pregunta 4 -->
+      <label>4. ¿Qué mascota tienes actualmente?</label>
+      <input type="radio" name="mascota" value="perro"> Perro<br>
+      <input type="radio" name="mascota" value="gato"> Gato<br>
+      <input type="radio" name="mascota" value="ave"> Ave<br>
+      <input type="radio" name="mascota" value="otra"> Otra<br>
+
+      <!-- Pregunta 5 -->
+      <label>5. ¿Qué tan importante consideras el cuidado de mascotas en tu vida?</label>
+      <input type="radio" name="importancia" value="muy_importante"> Muy importante<br>
+      <input type="radio" name="importancia" value="importante"> Importante<br>
+      <input type="radio" name="importancia" value="poco_importante"> Poco importante<br>
+      <input type="radio" name="importancia" value="nada_importante"> Nada importante<br>
+
+      <button type="submit" class="boton">Enviar</button>
+    </form>
+  </div>
+</body>
 </html>
+    </div>
+  <script>
+    // Función genérica para alternar mensajes
+    function toggleMensaje(idMensaje, idBoton, textoMostrar, textoBotonMostrar, textoBotonOcultar) {
+      const mensaje = document.getElementById(idMensaje);
+      const boton = document.getElementById(idBoton);
 
+      if (mensaje.style.display === "none" || mensaje.style.display === "") {
+        mensaje.innerText = textoMostrar;
+        mensaje.style.display = "block";
+        boton.innerText = textoBotonOcultar;
+      } else {
+        mensaje.style.display = "none";
+        boton.innerText = textoBotonMostrar;
+      }
+    }
+
+    // Función para alternar modo oscuro
+    function toggleDarkMode() {
+      const body = document.body;
+      const boton = document.getElementById("btnDarkMode");
+
+      body.classList.toggle("dark-mode");
+
+      if (body.classList.contains("dark-mode")) {
+        boton.innerText = "Modo claro";
+      } else {
+        boton.innerText = "Modo oscuro";
+      }
+    }
+
+    // Alternar mensaje del PEC
+    document.getElementById("show-message-button").addEventListener("click", function() {
+      const mensajePEC = document.getElementById("my-message");
+      if (mensajePEC.classList.contains("show")) {
+        mensajePEC.classList.remove("show");
+      } else {
+        mensajePEC.classList.add("show");
+      }
+    });
+  </script>
+</body>
+</html>
+<div>
